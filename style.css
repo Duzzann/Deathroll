@@ -1,54 +1,76 @@
-*{
-    margin:0;
+
+body {
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-}
-
-body{
-    background-image: url(/resources/peakpx.jpg);
+    background-image: url('resources/peakpx.jpg');
     background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat; 
-    max-height: 100vh;
-    background-color: #1b6886;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.container{
+
+.entryScreen,
+.game {
+    padding:20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+.logoFirst{
+    width:60%;
+    height: auto;
+    padding-top:6%;
+    margin-bottom: 4%;
+    margin-left: 6%;
+}
+.btn{
     display: block;
-    margin-left:21%;
-    margin-top:30px;
-    margin-bottom: auto;
-    max-width: 100vh;
-    max-height: 100vh; 
-}
-.logoBox{
-    
-}
-#logoFirst{
-    height: 70%;
-   display:block;
-   margin-right: 3%;
-}
-button,btn{
-    height: 10%;
-    width: 20%;
-    display:block;
-    margin-top:10%;
-    margin-left: 44%;
-    border: 10px solid white;
-    border-radius: 50px;
-    background-color: transparent;
-    color: white;
-    font-family: coolvetica;
-    font-size: 30px;
-}
-button:hover{
-    transition: 1s;
+    margin-left: 48%;
+    height: 7%;
+    width: 10%;
+    font-size: 15px;
     background-color: white;
-    color:#1b6886;
+    border: 3px solid white;
+    border-radius: 30px;
 }
-.hidden{
+.btn:hover{
+    transition: 0.5s;
+    background-color: rgb(23, 84, 114);
+    color: white;
+}
+.modalmenu{
+    
+    border: 8px solid white;
+    border-radius: 30px;
+    width:35%;
+    height:65%;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.modalmenu:hover{
+    transition:0.5s;
+    width: 38%;
+    height: 68%;
+}
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+.removed {
     display: none;
 }
-
